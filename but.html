@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Interaction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <p id="text">Original Text</p>
+        <button onclick="colourchange()" id="button">Click Me</button>
+    </div>
+    <script>
+        let changed = false;
+        function colourchange() {
+            const container = document.getElementById('container');
+            const butn = document.getElementById('button');
+            const textElement = document.getElementById('text');
+
+            if (changed) {
+                butn.innerHTML = "Click Me";
+                container.style.backgroundColor = "#FEF3E2";
+                textElement.innerHTML = "Original Text";
+            } else {
+                butn.innerHTML = "Reset";
+                container.style.backgroundColor = "plum";
+                textElement.innerHTML = "Look Here!!";
+            }
+            changed = !changed;
+        }
+    </script>
+    
+</body>
+</html>
